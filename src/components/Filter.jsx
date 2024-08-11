@@ -1,16 +1,24 @@
+import { set } from "lodash";
+
 const Filter=(props)=>
 {
     let filterdata=props.filterData;
     let category=props.category;
     let setcategory=props.setcategory;
 
+    function handleclick(category)
+    {
+        setcategory(category);
+    }
+
     return (
         <div>
-            <h1>HELO</h1>
             {
             filterdata.map( (data) =>
             (
-                <button>{data.title}
+                <button 
+                onClick={()=>handleclick(data.title)}>
+                {data.title}
                 </button>
             ))}
         </div>
