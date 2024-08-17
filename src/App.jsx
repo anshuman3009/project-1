@@ -32,21 +32,23 @@ function App() {
   },[]);
   return (
   <>
-    <div>
-      <div>
-        {/* <h1>HELLO</h1> */}
-        <NavBar/>
-        <Filter 
-        filterData={filterData} 
-        category={category}
-        setcategory={setcategory}
-        
-        />
+      <div className='min-h-screen min-w-full flex flex-col bg-bgDark2'>
         <div>
+          <NavBar/>
+        </div>
+        <div className='bg-bgDark2'>
+          <Filter 
+          filterData={filterData} 
+          category={category}
+          setcategory={setcategory}
+          />
+        </div>
+        <div className='w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]'>
            {  loading? <Spinner/>: <Cards courses={courses} category={category}></Cards>}
         </div>
+    
       </div>
-    </div>
+    
   </>
   )
 }
