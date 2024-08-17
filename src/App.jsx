@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import './App.css';
+// import './App.css';
 import NavBar from './components/NavBar';
 import Filter from './components/Filter';
 import Cards from './components/Cards';

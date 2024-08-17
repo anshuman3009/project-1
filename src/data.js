@@ -19,5 +19,9 @@ export const filterData = [
       id: "5",
       title: "Lifestyle",
     },
+    {
+      id:"6",
+      title:"Liked Courses",
+    },
 ];
 export const apirul="https://codehelp-apis.vercel.app/api/get-top-courses";
